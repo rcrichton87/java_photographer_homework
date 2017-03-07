@@ -2,23 +2,23 @@ import java.util.*;
 
 public class Photographer{
 
-  private ArrayList<String> cameras;
+  private ArrayList<Camera> cameras;
 
   public Photographer(){
-    this.cameras = new ArrayList<String>();
+    this.cameras = new ArrayList<Camera>();
   }
 
   public int cameraCount(){
     return cameras.size();
   }
 
-  public void addCamera(String camera){
+  public void addCamera(Camera camera){
     cameras.add(camera);
   }
 
-  public void removeCamera(String removeCamera){
+  public void removeCamera(Camera removeCamera){
     int index = 0;
-    for (String camera : cameras) {
+    for (Camera camera : cameras) {
       if (camera == removeCamera) {
         cameras.remove(index);
       }
