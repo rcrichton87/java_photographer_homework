@@ -92,4 +92,13 @@ public class PhotographerTest{
     assertEquals(1, photographer.journalLength() );
   }
 
+  @Test
+  public void photographerCanGetFromJournal(){
+    photographer.addToJournal("Monday", 15);
+    photographer.addToJournal("Tuesday", 12);
+    photographer.addToJournal("Wednesday", 33);
+    String expected = "On Tuesday, you took 12 photograpghs.";
+    assertEquals(expected, photographer.getFromJournal("Tuesday") );
+  }
+
 }

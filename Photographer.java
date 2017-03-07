@@ -49,4 +49,11 @@ public class Photographer{
     journal.put(key, value);
   }
 
+  public String getFromJournal(String day){
+    if (journal.get(day) != null ){
+      return "On " + day + ", you took " + journal.get(day).toString() + " photograpghs.";
+    }
+    return "Not found";
+  }
+
 }
