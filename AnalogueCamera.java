@@ -16,4 +16,8 @@ public class AnalogueCamera implements Camera{
     return this.name;
   }
 
+  public int getFocalLength(){
+    return this.focalLength;
+  }
+
 }

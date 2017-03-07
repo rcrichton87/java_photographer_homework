@@ -62,4 +62,9 @@ public class PhotographerTest{
     assertEquals(15, camera3.getFocalLength());
   }
 
+  @Test
+  public void analogueCameraCanPrintDetails(){
+
+  }
+
 }
