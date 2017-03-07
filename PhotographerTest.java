@@ -43,4 +43,9 @@ public class PhotographerTest{
     assertEquals(20, camera2.getShutterSpeed() );
   }
 
+  @Test
+  public void digitalCameraCanPrintDetails(){
+    assertEquals("Sony 5500 - 35ms", camera1.printDetails());
+  }
+
 }

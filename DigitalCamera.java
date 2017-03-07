@@ -9,7 +9,7 @@ public class DigitalCamera implements Camera{
   }
 
   public String printDetails(){
-    return "placeholder";
+    return this.name + " - " + this.shutterSpeed + "ms";
   }
 
   public String getName(){
