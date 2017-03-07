@@ -16,4 +16,14 @@ public class Photographer{
     cameras.add(camera);
   }
 
+  public void removeCamera(String removeCamera){
+    int index = 0;
+    for (String camera : cameras) {
+      if (camera == removeCamera) {
+        cameras.remove(index);
+      }
+      index++;  
+    }
+  }
+
 }
