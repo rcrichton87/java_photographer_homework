@@ -12,4 +12,8 @@ public class Photographer{
     return cameras.size();
   }
 
+  public void addCamera(String camera){
+    cameras.add(camera);
+  }
+
 }
