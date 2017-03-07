@@ -16,4 +16,8 @@ public class DigitalCamera implements Camera{
     return this.name;
   }
 
+  public int getShutterSpeed(){
+    return this.shutterSpeed;
+  }
+
 } 
