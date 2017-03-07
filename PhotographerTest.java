@@ -64,7 +64,7 @@ public class PhotographerTest{
 
   @Test
   public void analogueCameraCanPrintDetails(){
-
+    assertEquals("Fujifilm 450s - 20mm", camera4.printDetails());
   }
 
 }

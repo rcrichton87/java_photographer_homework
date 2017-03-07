@@ -9,7 +9,7 @@ public class AnalogueCamera implements Camera{
   }
 
   public String printDetails(){
-    return "placeholder";
+    return this.name + " - " + this.focalLength + "mm";
   }
 
   public String getName(){
