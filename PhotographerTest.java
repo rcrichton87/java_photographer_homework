@@ -1,5 +1,6 @@
 import static org.junit.Assert.*;
 import org.junit.*;
+import java.util.*;
 
 public class PhotographerTest{
 
@@ -8,9 +9,14 @@ public class PhotographerTest{
   DigitalCamera camera2;
   AnalogueCamera camera3;
   AnalogueCamera camera4;
+  HashMap<String, Integer> journal;
 
   @Before
   public void before(){
+    journal = new HashMap<String, Integer>();
+    // journal.put("Monday", 14);
+    // journal.put("Tuesday", 10);
+    // journal.put("Wednesday", 33);
     photographer = new Photographer();
     camera1 = new DigitalCamera("Sony 5500", 35);
     camera2 = new DigitalCamera("Zeiss 30", 20);
@@ -73,6 +79,11 @@ public class PhotographerTest{
     photographer.addCamera(camera4);
     String expected = "Sony 5500 - 35ms, Fujifilm 450s - 20mm";
     assertEquals(expected, photographer.collectionDetails() );
+  }
+
+  @Test 
+  public void photographerJounralStartsEmpty(){
+    assertEquals(0, photographer.journalLength() );
   }
 
 }

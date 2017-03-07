@@ -3,9 +3,11 @@ import java.util.*;
 public class Photographer{
 
   private ArrayList<Camera> cameras;
+  private HashMap<String, Integer> journal;
 
   public Photographer(){
     this.cameras = new ArrayList<Camera>();
+    this.journal = new HashMap<String, Integer>();
   }
 
   public int cameraCount(){
@@ -37,6 +39,10 @@ public class Photographer{
       }
     }
     return output;
+  }
+
+  public int journalLength(){
+    return journal.size();
   }
 
 }
