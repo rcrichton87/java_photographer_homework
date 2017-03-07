@@ -67,4 +67,12 @@ public class PhotographerTest{
     assertEquals("Fujifilm 450s - 20mm", camera4.printDetails());
   }
 
+  @Test
+  public void photographerCanPrintAllCameraDetails(){
+    photographer.addCamera(camera1);
+    photographer.addCamera(camera4);
+    String expected = "Sony 5500 - 35ms, Fujifilm 450s - 20mm";
+    assertEquals(expected, photographer.collectionDetails() );
+  }
+
 }

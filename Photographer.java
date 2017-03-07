@@ -26,4 +26,17 @@ public class Photographer{
     }
   }
 
+  public String collectionDetails(){
+    int count = 1;
+    String output = "";
+    for (Camera camera : cameras) {
+      output = output + camera.printDetails();
+      if (count < cameraCount() ) {
+        output = output + ", ";
+        count++;
+      }
+    }
+    return output;
+  }
+
 }
