@@ -45,4 +45,8 @@ public class Photographer{
     return journal.size();
   }
 
+  public void addToJournal(String key, Integer value){
+    journal.put(key, value);
+  }
+
 }

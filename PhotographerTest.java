@@ -86,4 +86,10 @@ public class PhotographerTest{
     assertEquals(0, photographer.journalLength() );
   }
 
+  @Test
+  public void photographerCanAddToJournal(){
+    photographer.addToJournal("Monday", 15);
+    assertEquals(1, photographer.journalLength() );
+  }
+
 }
