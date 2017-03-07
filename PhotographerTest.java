@@ -6,12 +6,16 @@ public class PhotographerTest{
   Photographer photographer;
   DigitalCamera camera1;
   DigitalCamera camera2;
+  AnalogueCamera camera3;
+  AnalogueCamera camera4;
 
   @Before
   public void before(){
     photographer = new Photographer();
     camera1 = new DigitalCamera("Sony 5500", 35);
     camera2 = new DigitalCamera("Zeiss 30", 20);
+    camera3 = new AnalogueCamera("Canon 1000", 15);
+    camera4 = new AnalogueCamera("Fujifilm 450s", 20);
   }
 
   @Test
@@ -46,6 +50,16 @@ public class PhotographerTest{
   @Test
   public void digitalCameraCanPrintDetails(){
     assertEquals("Sony 5500 - 35ms", camera1.printDetails());
+  }
+
+  @Test
+  public void analogueCameraHasName(){
+    assertEquals("Fujifilm 450s", camera4.getName() );
+  }
+
+  @Test
+  public void analogueCameraHasFocalLength(){
+    assertEquals(15, camera3.getFocalLength());
   }
 
 }
